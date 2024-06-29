@@ -1,23 +1,27 @@
 import "../saas/pages/_home.scss";
 import "../saas/utilities/_common.scss";
 import businessIcon from "../assets/school-business-icon.png";
-import loginBox from "../components/loginBox";
+import LoginBox from "../components/LoginBox";
 
 const Home = () => {
   return (
     <>
-      <div class="header">
-      <button className="button-style-one">Register organization</button>
+      <div className="header">
+      
 
       <img src={businessIcon} className="business-icon" />
+      <h3 className="header-title">SCHOOL</h3>
 
-        <h1 className="header-title">SCHOOL</h1>
         <p>Student Information Management System</p>
+        <div>
+            <button className="button-style-one">Register organization</button>
+            
+            </div>
       </div>
 
       <div className="login-container">
         
-        <loginBox/>
+        <LoginBox/>
       </div>
     </>
   );

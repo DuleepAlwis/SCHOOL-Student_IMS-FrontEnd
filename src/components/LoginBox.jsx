@@ -1,7 +1,7 @@
 
 import "../saas/components/_login_box.scss";
 
-const loginBox = ()=>{
+const LoginBox = ()=>{
     return (
         <>
             <div className="login-box">
@@ -14,4 +14,4 @@ const loginBox = ()=>{
     )
 }
 
-export default loginBox;
+export default LoginBox;

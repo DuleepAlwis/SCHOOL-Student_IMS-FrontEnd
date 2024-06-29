@@ -9,29 +9,30 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 // Overrides
-@import "./overrides/bootstrap";
-@import "./overrides/react_date_picker";
-@import "./overrides/react_toastify";
+//@import "./overrides/bootstrap";
+//@import "./overrides/react_date_picker";
+//@import "./overrides/react_toastify";
 
 // Utilities
-@import "./utilities";
+//@import "./utilities";
 
 // Layouts
-@import "./layouts";
+//@import "./layouts";
 
 // Components
-@import "./components";
+//@import "./components";
 
 // Modals
-@import "./modals";
+//@import "./modals";
 
 // Page
-@import "./page";
+//@import "./page";
 
 html,
 body,
 #root {
-  height: 100%;
+  height: 100% !important;
+  overflow: hidden !important;
 }
 
 .equip-landing-logo {

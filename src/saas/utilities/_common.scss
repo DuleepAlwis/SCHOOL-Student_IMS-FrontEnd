@@ -34,9 +34,19 @@
 }
 
 .business-icon{
-  width: 3% !important;
+  width: 3%;
    font-size: 24px; /* Adjust icon size as needed */
     margin-right: 10px; /* Space between icon and text */
     height: 55px;
     display: inline-block;
+}
+
+@media (max-width: 760px) {
+  .business-icon {
+    width: 11% !important;
+    font-size: 24px; /* Adjust icon size as needed */
+     margin-right: 10px; /* Space between icon and text */
+     height: 55px;
+     display: inline-block;
+  }
 }

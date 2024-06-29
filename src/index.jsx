@@ -3,6 +3,8 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import store from "./store.js";
 import { Provider } from "react-redux";
+import "./saas/_main.scss";
+
 //import { ThemeProvider } from "./context/ThemeContext.js";
 
 //import "./index.css";
