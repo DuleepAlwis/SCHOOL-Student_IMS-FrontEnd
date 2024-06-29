@@ -1,0 +1,43 @@
+@import '../variables/colors';
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: map-get($colors, "teal");; /* Fallback color */
+    //background-image: url('../../assets/home_image.png');
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
+
+
+.header {
+    padding: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: map-get($colors, "teal");
+    color: white;
+    font-size: 30px;
+  }
+
+  .header-title{
+    display: inline-block;
+  }
+
+  .button-style-one {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    margin: 10px;
+    background-color: map-get($colors, "darkGreen" );
+    color: map-get($colors , "white");
+    font-size: medium;
+}

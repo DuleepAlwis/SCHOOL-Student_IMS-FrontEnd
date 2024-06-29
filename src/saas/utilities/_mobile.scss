@@ -1,0 +1,473 @@
+.app {
+  &.mobile-view {
+    .navbar-container {
+      display: block;
+
+      .navbar {
+        .navbar-toggler {
+          box-shadow: none;
+        }
+
+        .message-count-container {
+          position: relative;
+          top: -3px;
+          font-size: 8px;
+          color: map-get($colors, "white");
+          background-color: map-get($colors, "red");
+          height: 16px;
+          width: 16px;
+
+          span {
+            position: relative;
+            top: 2px;
+          }
+        }
+      }
+    }
+
+    .main-content-container {
+      margin-top: 56px;
+
+      .sidebar {
+        display: none;
+      }
+
+      .main-content {
+        width: 100%;
+      }
+    }
+
+    .search-equipments {
+      .input-group {
+        .items {
+          position: relative;
+          width: 100%;
+
+          .input-icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 25px;
+            width: 25px;
+          }
+
+          .first-icon {
+            right: 5px;
+            img {
+              height: 12px !important;
+            }
+          }
+
+          .second-icon {
+            right: 33px;
+
+            img {
+              height: 12px !important;
+            }
+          }
+        }
+      }
+    }
+
+    .equipment-type-card {
+      height: 130px;
+      .thumbnail-container {
+        width: 120px;
+        height: 100px;
+        min-height: 110px;
+        min-width: 100px;
+        img {
+          width: 100px;
+          height: 100px;
+          min-height: 100px;
+          min-width: 100px;
+          object-fit: cover;
+        }
+      }
+
+      .available-button {
+        bottom: 78px;
+      }
+    }
+
+    .recently-viewed-container {
+      .slick-slide {
+        max-width: 50vw !important;
+      }
+
+      .recent-equipment-card-container {
+        max-width: 100% !important;
+        height: 220px;
+        .thumbnail-container {
+          img {
+            width: 100%;
+            height: 100px;
+            min-height: 100px;
+            max-width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+    .my-notification-container {
+      .bell-icon-container {
+        display: inline;
+        position: absolute;
+        top: 45px;
+        right: 0px;
+        width: 60px;
+
+        img {
+          width: 30px;
+        }
+
+        &.message-icon {
+          top: 10px;
+        }
+      }
+
+      .unread-notification-count-container {
+        // top: -3px;
+        height: 20px;
+        width: 20px;
+        right: 14px;
+
+        p {
+          padding: 0;
+          margin: 0;
+          font-size: 10px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .notification-panel-container {
+      margin-top: 55px;
+      .header-container {
+        .unread-notification-count-container {
+          p {
+            position: relative;
+            top: 0px;
+            font-size: 10px;
+          }
+        }
+      }
+    }
+
+    .my-equipment-container {
+      .add-equipment-btn,
+      .draft-equipment-btn {
+        min-width: 114px;
+      }
+    }
+
+    .report-issue {
+      .modal-body {
+        .image-container {
+          .issue-image-container {
+            width: 80px;
+          }
+        }
+        .upload-image-container {
+          height: 170px;
+        }
+      }
+    }
+
+    .equipment-rent-modal-container {
+      .modal-header {
+        .spinner-border {
+          position: absolute;
+          left: 63px;
+          height: 10px;
+          width: 10px;
+        }
+      }
+    }
+
+    .share-equipment-container {
+      .copy-text-box {
+        .link-container {
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+
+    .reservation-detail-container {
+      .reservation-detail {
+        // Basic information
+        .basic-information-container {
+          .required-tag {
+            font-size: 0.65rem;
+          }
+        }
+      }
+    }
+
+    .current-equipment-photos-container {
+      .image-preview-slider-container {
+        .slick-arrow {
+          display: none !important;
+        }
+      }
+    }
+
+    .support-ticket-inner-container {
+      .ticket-detail-container {
+        .ticket-detail-container {
+          .info-header-container {
+            min-height: 300px;
+            max-height: 300px;
+          }
+        }
+        .message-details {
+          .chat {
+            .messages {
+              min-height: 350px;
+              max-height: 350px;
+            }
+          }
+        }
+      }
+    }
+
+    .profile-view-equipment-button-wrapper {
+      width: 300px;
+      max-width: 300px;
+    }
+
+    .forgot-password-verification-form,
+    .sign-up-verification-form {
+      input {
+        margin: 5px !important;
+      }
+    }
+
+    .sign-up-completion-form {
+      .driver-license-container {
+        .driver-license-image {
+          width: 300px;
+          height: 225px;
+        }
+      }
+    }
+
+    .equipment-detail-container {
+      .equipment-detail {
+        .pricing-container {
+          .daily-rental-price,
+          .daily-rental-title,
+          .monthly-rental-price,
+          .monthly-rental-title {
+            max-width: 100px;
+          }
+        }
+      }
+    }
+
+    .equipment-result-card-container {
+      height: 250px;
+      .thumbnail-container {
+        img {
+          height: 135px;
+          min-height: 135px;
+        }
+      }
+    }
+
+    .my-equipment-card-outer-container {
+      min-width: auto !important;
+    }
+
+    .my-equipment-card-container {
+      height: 225px;
+      .thumbnail-container {
+        img {
+          height: 130px;
+          width: 130px;
+        }
+      }
+    }
+
+    .check-in-equipment-container {
+      .modal-body {
+        min-height: 330px;
+      }
+    }
+
+    .my-reservations-container {
+      .reservation-content {
+        .tab-layout {
+          .tabs {
+            .tab {
+              font-size: 0.6rem;
+              max-height: 45px;
+              white-space: unset;
+              text-overflow: unset;
+              max-height: 30px;
+              &.upcoming {
+                padding: 2px 0px !important;
+              }
+
+              &.previous {
+                padding: 2px 5px !important;
+              }
+            }
+          }
+
+          .tab-content {
+            .thumbnail-container {
+              width: 96px;
+              height: 80px;
+              min-height: 80px;
+              min-width: 96px;
+
+              .thumbnail-image {
+                width: 80px;
+                height: 80px;
+                min-height: 80px;
+                min-width: 80px;
+                border-radius: 5px;
+                object-fit: cover;
+              }
+
+              .thumbnail-top-icon {
+                left: -4px;
+                img {
+                  display: inline-block;
+                  height: 15px;
+                }
+              }
+
+              .thumbnail-bottom-icon {
+                position: absolute;
+                bottom: -10px;
+                left: -8px;
+
+                img {
+                  height: 18px;
+                }
+              }
+            }
+
+            .details {
+              padding-top: 0px !important;
+              padding-left: 8px !important;
+
+              h6 {
+                font-size: 0.75rem;
+                margin-bottom: 0px;
+              }
+
+              .arrow-icon {
+                width: 29px;
+                height: 10px;
+              }
+              .delivery-icon {
+                width: 9px;
+              }
+
+              p,
+              span {
+                font-size: 0.54rem;
+                display: flex;
+                align-items: center;
+              }
+
+              .text-date {
+                font-size: 0.54rem;
+              }
+
+              .price-container {
+                max-width: 100px;
+                margin-top: 7px;
+
+                .price {
+                  text-align: center !important;
+                  font-size: 0.6rem;
+                }
+              }
+
+              .card-container {
+                margin-top: 7px;
+                display: flex;
+                align-items: end;
+                .card-icon {
+                  width: auto;
+                  height: 15px;
+                }
+              }
+
+              .delivery-icon {
+                margin-left: 1px;
+              }
+
+              .web-view {
+                display: none !important;
+              }
+
+              .action-button-container {
+                display: flex !important;
+              }
+
+              .action-button-container {
+                max-height: 30px;
+                padding-right: 5px !important;
+
+                button {
+                  max-height: 20px;
+                  padding: 2px 15px !important;
+                }
+              }
+
+              .ready-checkout {
+                font-size: 0.6rem;
+                max-width: 500px;
+
+                .btn-ready-checkout {
+                  font-size: 0.6rem;
+                }
+              }
+              .receipt-ready {
+                font-size: 0.6rem;
+                max-width: 500px;
+
+                .btn-receipt-ready {
+                  font-size: 0.6rem;
+                }
+              }
+
+              .renter-acceptance {
+                font-size: 0.6rem;
+                max-width: 235px;
+                max-height: 42.5px;
+              }
+
+              .issue-submit {
+                font-size: 0.6rem;
+                max-width: 600px;
+
+                .btn-issue-submit {
+                  font-size: 0.6rem;
+                  border-radius: 15px;
+                }
+              }
+
+              .ready-checkIn {
+                font-size: 0.6rem;
+                max-width: 500px;
+
+                .btn-ready-checkIn {
+                  font-size: 0.6rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

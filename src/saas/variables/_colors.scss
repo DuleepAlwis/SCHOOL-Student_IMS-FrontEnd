@@ -1,0 +1,64 @@
+// Regular colors
+$blue: #4285f4;
+$mid-blue: #90baff;
+$dark-blue: #2b69ce;
+$light-blue: #e3edfe;
+
+$white: #fff;
+$light-gray: #f4f4f4;
+$outline-gray: #bcbcbc;
+$gray-400: #deddde;
+$gray-500: #e7e4e4;
+$gray-600: #c4c4c4;
+$gray-700: #f8f8f8;
+$gray-800: #a7a7a7;
+$black: #030303;
+$pure-black: #000000;
+
+$pink: #fedcc6;
+$light-red: #a83434;
+$dark-red: #9b2929;
+
+$yellow: #bf9c07;
+$dark-yellow: #ad9110;
+$light-yellow: #fcf6cc;
+$medium-yellow: #e0cd3e;
+$red: #d90000;
+$light-green: #dbf7d9;
+$green: #34a853;
+$dark-green: #2c8844;
+$orange: #f3752b;
+
+$light-orange: #f9e6d9;
+$teal: #008080;
+// Mapping regular colors
+$colors: (
+  "blue": $blue,
+  "darkBlue": $dark-blue,
+  "white": $white,
+  "black": $black,
+  "outlineGray": $outline-gray,
+  "lightGray": $light-gray,
+  "gray_600": $gray-600,
+  "gray_700": $gray-700,
+  "gray_800": $gray-800,
+  "gray_400": $gray-400,
+  "red": $red,
+  "pureBlack": $pure-black,
+  "lightGreen": $light-green,
+  "green": $green,
+  "pink": $pink,
+  "orange": $orange,
+  "lightOrange": $light-orange,
+  "lightRed": $light-red,
+  "lightBlue": $light-blue,
+  "yellow": $yellow,
+  "lightYellow": $light-yellow,
+  "darkRed": $dark-red,
+  "midBlue": $mid-blue,
+  "gray_500": $gray-500,
+  "darkGreen": $dark-green,
+  "darkYellow": $dark-yellow,
+  "mediumYellow": $medium-yellow,
+  "teal":$teal
+);

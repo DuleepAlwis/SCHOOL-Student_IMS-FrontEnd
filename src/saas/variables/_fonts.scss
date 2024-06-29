@@ -1,0 +1,83 @@
+// Import the Roboto font from Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+$font-family-sans-serif: "Roboto", sans-serif;
+
+html {
+  font-size: 16px;
+}
+
+@media (min-width: 576px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+body {
+  font-size: 1rem; /* 16px */
+  font-family: $font-family-sans-serif !important;
+}
+
+h1 {
+  font-size: 2rem; /* 32px */
+}
+
+h2 {
+  font-size: 1.5rem; /* 24px */
+}
+
+h3 {
+  font-size: 1.25rem; /* 20px */
+}
+
+h4 {
+  font-size: 1rem; /* 16px */
+}
+
+h5 {
+  font-size: 0.875rem; /* 14px */
+}
+
+h6 {
+  font-size: 0.75rem; /* 12px */
+}
+
+
+small {
+  font-size: 1rem; /* 16px */
+}
+
+caption,
+small {
+  font-size: 0.875rem; /* 14px */
+}
+
+$font-size-base: 1rem;
+$font-size-sm: $font-size-base * 0.875;
+$font-size-lg: $font-size-base * 1.25;
+
+$font-weight-lighter: lighter;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-bolder: bolder;
+
+$font-weight-base: $font-weight-normal;
+
+$line-height-base: 1.5;
+$line-height-sm: 1.25;
+$line-height-lg: 2;
+
+$fonts: (
+  "lighter": $font-weight-lighter,
+  "light": $font-weight-light,
+  "normal": $font-weight-normal,
+  "bold": $font-weight-bold,
+  "bolder": $font-weight-bolder
+);

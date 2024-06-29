@@ -1,0 +1,42 @@
+@import '../variables/fonts';
+@import '../variables/colors';
+
+.text-lighter {
+  font-weight: map-get($fonts, "lighter");
+}
+
+.text-light {
+  font-weight: map-get($fonts, "light");
+}
+
+.text-normal {
+  font-weight: map-get($fonts, "normal");
+}
+
+.text-bold {
+  font-weight: map-get($fonts, "bold");
+}
+
+.text-bolder {
+  font-weight: map-get($fonts, "bolder");
+}
+
+.text-secondary-1 {
+  color: map-get($colors, "gray_800");
+}
+
+.bg-light-blue {
+  background-color: map-get($colors, "lightBlue");
+}
+
+.bg-dark-blue {
+  background-color: map-get($colors, "darkBlue");
+}
+
+.business-icon{
+  width: 3% !important;
+   font-size: 24px; /* Adjust icon size as needed */
+    margin-right: 10px; /* Space between icon and text */
+    height: 55px;
+    display: inline-block;
+}
