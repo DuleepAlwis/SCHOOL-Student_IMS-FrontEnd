@@ -21,7 +21,7 @@ const Home = () => {
 
       <div className="login-container">
         
-        <LoginBox/>
+        <LoginBox showLogin={true} showForgotPassword={false} showOtpCode={false}/>
       </div>
     </>
   );
