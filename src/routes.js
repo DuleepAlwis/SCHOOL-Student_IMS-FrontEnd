@@ -4,6 +4,7 @@ export const RoutePaths = {
     home: "/",
     createCompany: "/create-company",
     forgotPassword:"/forgot-password",
-    notFound:"/Not-found"
+    notFound:"/Not-found",
+    orgAdminDashBoard:"/orgAdminDashboard"
   };
   

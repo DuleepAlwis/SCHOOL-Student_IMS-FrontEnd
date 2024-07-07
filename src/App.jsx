@@ -8,6 +8,8 @@ import { theme } from "./styles/theme/theme";
 import { RoutePaths } from "./routes";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
+import { OrgAdminDashBoard } from "./pages/OrgAdminDashboard";
+import ProtectedRoute from "./components/ProtectedRoute";
 //import "./App.css";
 
 function App() {
@@ -49,6 +51,14 @@ function App() {
             <Route path={RoutePaths.notFound} element={<NotFound />} />
             <Route path="/*" element={<Navigate to={RoutePaths.notFound} />} />
             <Route path={RoutePaths.notFound} element={<NotFound />} />
+            <Route
+              path={RoutePaths.orgAdminDashBoard}
+              element={
+                <ProtectedRoute>
+                  <OrgAdminDashBoard />
+                </ProtectedRoute>
+              }
+            />
           </Routes>
         </Router>
       </ThemeProvider>
