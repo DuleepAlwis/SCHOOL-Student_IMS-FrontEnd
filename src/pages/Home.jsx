@@ -2,8 +2,43 @@ import "../saas/pages/_home.scss";
 import "../saas/utilities/_common.scss";
 import businessIcon from "../assets/school-business-icon.png";
 import LoginBox from "../components/LoginBox";
+import { useState } from "react";
+import { MainForm } from "../components/MainForm";
 
 const Home = () => {
+
+  const [boxState,setBoxState] = useState({
+    showLogin:true,
+    showForgotPassword:false,
+    showOtpCode:false,
+    showCreateOrg:false,
+    showBacktoHome:false
+  });
+
+  const renderOrgForm = () =>{
+    const newBoxState = {
+      showLogin:false,
+      showForgotPassword:false,
+      showOtpCode:false,
+      showCreateOrg:true,
+      showBacktoHome:true
+    };
+
+    setBoxState(newBoxState);
+  };
+
+  const renderHome = ()=>{
+    const newBoxState = {
+      showLogin:true,
+      showForgotPassword:false,
+      showOtpCode:false,
+      showCreateOrg:false,
+      showBacktoHome:false
+    };
+
+    setBoxState(newBoxState);
+  };
+
   return (
     <>
       <div className="header">
@@ -14,14 +49,18 @@ const Home = () => {
 
         <p>Student Information Management System</p>
         <div>
-            <button className="button-style-one">Register organization</button>
-            
+            { !boxState.showBacktoHome &&
+              <button onClick={renderOrgForm} className="button-style-one">Register organization</button>
+            }
+             { boxState.showBacktoHome &&
+              <button onClick={renderHome} className="button-style-one">Home</button>
+            }
             </div>
       </div>
 
       <div className="login-container">
-        
-        <LoginBox showLogin={true} showForgotPassword={false} showOtpCode={false}/>
+        <MainForm showForm={boxState} setShowForm={setBoxState}/>
+        <LoginBox showBox={boxState} setShowBox={setBoxState}/>
       </div>
     </>
   );

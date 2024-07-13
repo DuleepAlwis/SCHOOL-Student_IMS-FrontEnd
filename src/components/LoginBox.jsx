@@ -4,13 +4,13 @@ import { loginService } from "../Service/AuthService";
 import "../saas/components/_login_box.scss";
 
 
-const LoginBox = ({ showLogin, showForgotPassword, showOtpCode }) => {
+const LoginBox = ({ showBox,setShowBox }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [otp, setOtp] = useState("");
-  const [login, setLogin] = useState(showLogin);
-  const [forgotPassword, setForgotPassword] = useState(showForgotPassword);
-  const [otpCode, setOtpCode] = useState(showOtpCode);
+  // const [login, setLogin] = useState(showBox.showLogin);
+  // const [forgotPassword, setForgotPassword] = useState(showBox.showForgotPassword);
+  // const [otpCode, setOtpCode] = useState(showBox.showOtpCode);
   const dispatch = useDispatch();
   const { isLoading, error } = useSelector((state) => state.auth);
 
@@ -18,27 +18,36 @@ const LoginBox = ({ showLogin, showForgotPassword, showOtpCode }) => {
     setEmail("");
     setPassword("");
     setOtp("");
-    setLogin(true);
-    setForgotPassword(false);
-    setOtpCode(false);
+    setShowBox({
+      ...showBox,
+      showLogin:true,
+      showForgotPassword:false,
+      showOtpCode:false,
+    });
   }
 
   const renderForgotPassword = () => {
     setEmail("");
     setPassword("");
     setOtp("");
-    setLogin(false);
-    setForgotPassword(true);
-    setOtpCode(false);
+    setShowBox({
+      ...showBox,
+      showLogin:false,
+      showForgotPassword:true,
+      showOtpCode:false,
+    })
   };
 
   const renderOtpCode = () => {
     setEmail("");
     setPassword("");
     setOtp("");
-    setLogin(false);
-    setForgotPassword(false);
-    setOtpCode(true);
+    setShowBox({
+      ...showBox,
+      showLogin:false,
+      showForgotPassword:false,
+      showOtpCode:true,
+    })
   };
 
   const submitLogin = (e) => {
@@ -46,7 +55,7 @@ const LoginBox = ({ showLogin, showForgotPassword, showOtpCode }) => {
     dispatch(loginService({ email, password }));
   };
 
-  if (login == true) {
+  if (showBox.showLogin == true) {
     return (
       <>
         <div className="login-box">
@@ -62,7 +71,7 @@ const LoginBox = ({ showLogin, showForgotPassword, showOtpCode }) => {
       </>
     );
   }
-  if (forgotPassword == true) {
+  if (showBox.showForgotPassword == true) {
     return (
       <>
         <div className="login-box">
@@ -77,7 +86,7 @@ const LoginBox = ({ showLogin, showForgotPassword, showOtpCode }) => {
     );
   }
 
-  if (otpCode == true) {
+  if (showBox.showOtpCode == true) {
     return (
       <>
         <div className="login-box">

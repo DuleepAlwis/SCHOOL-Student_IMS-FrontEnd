@@ -2,8 +2,9 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { restEndPoints } from '../Auth/RestEp';
 
+
 export const loginService = createAsyncThunk(
-    'auth/login',
+    '/auth/login',
     async (credentials, { rejectWithValue }) => {
       try {
         const response = await axios.post(restEndPoints.LOGIN, credentials);
