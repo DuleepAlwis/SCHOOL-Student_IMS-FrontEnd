@@ -1,5 +1,10 @@
 @import '../variables/colors';
 
+#root {
+  height: 100% !important;
+  overflow-y: scroll !important;
+}
+
 .main-form-container {
     background-color: map-get($colors,"white" );
     padding: 20px;
@@ -11,6 +16,12 @@
     grid-template-columns: 150px 1fr;
     gap: 10px 20px; /* Space between label and input and between rows */
     margin:5px 35%;
+    overflow: auto;
+}
+
+.enable-scroll {
+  overflow-y: scroll;
+  max-height: 300px; /* Example of setting maximum height */
 }
 
 .main-form-container label {
@@ -63,11 +74,16 @@
   display:block;
 }
 
+.form-inner-container{
+  margin-bottom: 10px;
+}
+
 @media (max-width: 728px) {
     .main-form-container {
       width: 100%;
       margin:0px;
-      overflow-y: auto;
+      // overflow-y: auto;
+      justify-content: center;
     }
 
     .form-inner-container{

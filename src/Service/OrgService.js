@@ -3,9 +3,9 @@ import store from '../store';
 import { createOrg } from '../Redux/actions/formActions';
 
 const OrgService = {
-    createOrganization: (formData) => {
+    createOrganization: async (formData) => {
       // Example: Dispatching an action
-      store.dispatch(createOrg(formData));
+      await store.dispatch(createOrg(formData));
   
       // Example: Accessing Redux state
       const state = store.getState();

@@ -12,7 +12,10 @@ const Home = () => {
     showForgotPassword:false,
     showOtpCode:false,
     showCreateOrg:false,
-    showBacktoHome:false
+    showBacktoHome:false,
+    responseMsg:"",
+    successState:false,
+    errorState:false
   });
 
   const renderOrgForm = () =>{
@@ -21,7 +24,10 @@ const Home = () => {
       showForgotPassword:false,
       showOtpCode:false,
       showCreateOrg:true,
-      showBacktoHome:true
+      showBacktoHome:true,
+      responseMsg:"",
+    successState:false,
+    errorState:false
     };
 
     setBoxState(newBoxState);
@@ -33,7 +39,10 @@ const Home = () => {
       showForgotPassword:false,
       showOtpCode:false,
       showCreateOrg:false,
-      showBacktoHome:false
+      showBacktoHome:false,
+      responseMsg:"",
+    successState:false,
+    errorState:false
     };
 
     setBoxState(newBoxState);
