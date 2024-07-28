@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef ,useCallback } from "react";
 import "../saas/components/_main_form.scss";
 import OrgService from "../Service/OrgService";
+import Swal from 'sweetalert2';
 
 export const MainForm = ({showForm,setShowForm})=>{
 
@@ -88,7 +89,12 @@ export const MainForm = ({showForm,setShowForm})=>{
             // setSuccessState(true);
             // setErrorState(false);
             // clearTimeout(timer);
-            setShowForm({...showForm,responseMsg:result.form.data.message,successState:true,errorState:false});
+            //setShowForm({...showForm,responseMsg:result.form.data.message,successState:true,errorState:false});
+            Swal.fire({
+                title: "Success",
+                text: result.form.data.message,
+                icon: "success"
+              });
 
         }
         if(result.form.error!=null){
@@ -96,8 +102,12 @@ export const MainForm = ({showForm,setShowForm})=>{
             // setSuccessState(false);
             // setErrorState(true);
             // clearTimeout(timer);
-            setShowForm({...showForm,responseMsg:result.form.error.response.data.message,successState:false,errorState:true});
-
+            //setShowForm({...showForm,responseMsg:result.form.error.response.data.message,successState:false,errorState:true});
+            Swal.fire({
+                title: "Error",
+                text: result.form.error.response.data.message,
+                icon: "error"
+              });
         }
 
         setOrgDetails(

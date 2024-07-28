@@ -20,4 +20,15 @@ export const createOrg = (formData) => ({
     type: 'FORM_SUBMIT_FAILURE',
     payload: error
   });
+
+  export const loginUser = (formData) =>({
+    type:'API',
+    payload:{
+      url:restEndPoints.LOGIN,
+      method:'POST',
+      data:formData,
+      onSuccess:'FORM_SUBMIT_SUCCESS',
+      onError:'FORM_SUBMIT_FAILURE'
+    }
+  })
   

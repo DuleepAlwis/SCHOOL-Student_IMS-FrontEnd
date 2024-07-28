@@ -1,12 +1,12 @@
 import { configureStore} from '@reduxjs/toolkit';
-import authReducer from './Redux/authSlice';
+//import authReducer from './Redux/authSlice';
 import {   combineReducers } from 'redux';
 import {thunk} from 'redux-thunk';
 import apiMiddleware from './Redux/middleware/apiMiddleware';
 import formReducer from './Redux/reducers/formReducers';
 
 const rootReducer = combineReducers({
-  auth: authReducer,
+ // auth: authReducer,
   form: formReducer
 });
 

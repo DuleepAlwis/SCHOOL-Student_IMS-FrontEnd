@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
-import { loginService } from "../Service/AuthService";
+import { Login } from "../Service/AuthService";
 import "../saas/components/_login_box.scss";
-
+import Swal from 'sweetalert2';
 
 const LoginBox = ({ showBox,setShowBox }) => {
   const [email, setEmail] = useState("");
@@ -12,7 +12,7 @@ const LoginBox = ({ showBox,setShowBox }) => {
   // const [forgotPassword, setForgotPassword] = useState(showBox.showForgotPassword);
   // const [otpCode, setOtpCode] = useState(showBox.showOtpCode);
   const dispatch = useDispatch();
-  const { isLoading, error } = useSelector((state) => state.auth);
+  const { isLoading, data,error } = useSelector((state) => state);
 
   const renderLoginBox = ()=>{
     setEmail("");
@@ -50,9 +50,29 @@ const LoginBox = ({ showBox,setShowBox }) => {
     })
   };
 
-  const submitLogin = (e) => {
+  const submitLogin = async(e) => {
     e.preventDefault();
-    dispatch(loginService({ email, password }));
+    //dispatch(login({ "email":email, "password":password }));
+    const payload = {
+      "email":email,
+      "password":password
+    }
+    const result = await Login.loginUser(payload);
+    console.log("==================");
+    console.log(result);
+    if(result.form.data!=null){
+       
+      
+    }
+    if(result.form.error!=null){
+       
+      Swal.fire({
+        title: "Error",
+        text: result.form.error.response.data.message,
+        icon: "error"
+      });
+    }
+
   };
 
   if (showBox.showLogin == true) {
